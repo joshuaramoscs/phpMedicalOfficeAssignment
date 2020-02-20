@@ -6,7 +6,7 @@
  <body>
    <!-- Start of Form-->
    <p>Fill out the fields below to add patient to schedule.</p>
-   <form action="scheduler.php" method="post">
+   <form action="generateSchedule.php" method="post">
      <!-- Patient's Name-->
      <p>Patient's name: <input type="text" name="name" /></p>
      <!-- Patient's Address-->
@@ -79,7 +79,7 @@
         <option value = "6"6</option>6
      </select>
      :
-     <select name = "endtMin">
+     <select name = "endMin">
         <option value = "00"00</option>00
         <option value = "15"15</option>15
         <option value = "30"30</option>30
@@ -90,14 +90,12 @@
      <!-- Submit Button-->
      <p><input type="submit" /></p>
    </form>
+   <!--Save values to schedulerList.txt-->
    <?php
+   $patientInfo = $_POST[name].",".$_POST[address].",".$_POST[coordinateX].",".$_POST[coordinateY].",".
+   $_POST[startHour].",".$_POST[startMin].",".$_POST[endHour].",".$_POST[endMin].",".$_POST[newPatient]."\n";
 
-   $patientInfo = (.$_POST[name].:.$_POST[address].;
-
-   if(array_key_exists('newPatient', $_POST)) {
-     header('Location: newPatient.php');
-   }
-
+   file_put_contents("schedulerList.txt", $patientInfo, FILE_APPEND);
     ?>
  </body>
 </html>
