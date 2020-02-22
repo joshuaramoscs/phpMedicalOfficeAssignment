@@ -16,7 +16,7 @@
    }
    //Save patient in to session array
    $patientInfoArray = array($_POST['name'], $_POST['address'], $_POST['coordinateX'], $_POST['coordinateY'],
-    $_POST['startHour'], $_POST['startMin'], $_POST['endHour'], $_POST['endMin'], $_POST['newPatient']);
+    $_POST['startHour'], $_POST['startMin'], $_POST['endHour'], $_POST['endMin'], $_POST['newPatient'], 60);
 
    if($_SESSION['patientArray'] == NULL) {
      echo "if 1\n";
