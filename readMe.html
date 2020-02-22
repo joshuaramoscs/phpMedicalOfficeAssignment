@@ -1,0 +1,31 @@
+<html>
+ <head>
+  <title>README Page</title>
+  <h1>Medical Office Scheduler README Page</h1>
+ </head>
+ <body>
+   <h3><u>Medical Office Scheduler Logistics</u></h3>
+   <p><strong>Appointment hours: </strong>
+     From 9:00 AM to 6:00 PM.
+   </p>
+   <p><strong>Possible appointment times: </strong>
+     Max: Every quarter hour.
+   </p>
+   <p><strong>Default Appintment times: </strong>
+     Established patients: 30 mins.  New patients: 90 mins.
+   </p>
+   <p><strong>Drive Time: </strong>
+     Each coordinate move in the X or Y-axis takes 2 minutes.
+   </p>
+
+   <h3 style='color: red'><u>Medical Office Scheduler Warnings</u></h3>
+   <p> If Patient's name is left blank, patient will not be scheduled.</p>
+   <p> If Patient's coordinate is left blank, default coordinate "A0" will be assigned.</p>
+   <p> If Patient's start time is set, but not their end time, then defailt appointment time will be set.</p>
+   <p> If desired start time is after desired end time, desired end time will be calculated to default appointment time.</p>
+
+   <form action="scheduler.html">
+    <input type="submit" value="Go Back" />
+   </form>
+ </body>
+</html>

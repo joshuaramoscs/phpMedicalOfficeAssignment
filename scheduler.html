@@ -4,9 +4,12 @@
   <h1>Medical Office Scheduler Form</h1>
  </head>
  <body>
+   <!-- Important README page-->
+   <form action="readMe.html">
+    <input type="submit" value="README Page" />
+   </form>
    <!-- Start of Form-->
    <p>Fill out the fields below to add patient to schedule.</p>
-   <p style='color: red'>Warning! If patient's start time and end time are equal or if the end time is before the start time, the patient will not be added!</p>
    <form action="scheduler.php" method="post">
      <!-- Patient's Name-->
      <p>Patient's name: <input type="text" name="name" /></p>
@@ -42,24 +45,53 @@
          <option value = "Y"Y</option>Y
          <option value = "Z"Z</option>Z
        </select>
-       <input type="number" name = coordinateY>
+       <select name = "coordinateY">
+         <option value = "0"0</option>0
+         <option value = "1"1</option>1
+         <option value = "2"2</option>2
+         <option value = "3"3</option>3
+         <option value = "4"4</option>4
+         <option value = "5"5</option>5
+         <option value = "6"6</option>6
+         <option value = "7"7</option>7
+         <option value = "8"8</option>8
+         <option value = "9"9</option>9
+         <option value = "10"10</option>10
+         <option value = "11"11</option>11
+         <option value = "12"12</option>12
+         <option value = "13"13</option>13
+         <option value = "14"14</option>14
+         <option value = "15"15</option>15
+         <option value = "16"16</option>16
+         <option value = "17"17</option>17
+         <option value = "18"18</option>18
+         <option value = "19"19</option>19
+         <option value = "20"20</option>20
+         <option value = "21"21</option>21
+         <option value = "22"22</option>22
+         <option value = "23"23</option>23
+         <option value = "24"24</option>24
+         <option value = "25"25</option>25
+       </select>
      </p>
      <!-- Start availability selection-->
-     <p>Enter Patient's availability from 9 am to 6 pm.</p>
+     <p>Optional desired time slot:
      <!-- Start availability dropdown-->
      <select name = "startHour">
-       <option value = "9"9</option>9
+       <option value = "--"--</option>--
+       <option value = "09"09</option>09
        <option value = "10"10</option>10
        <option value = "11"11</option>11
        <option value = "12"12</option>12
-       <option value = "1"1</option>1
-       <option value = "2"2</option>2
-       <option value = "3"3</option>3
-       <option value = "4"4</option>4
-       <option value = "5"5</option>5
+       <option value = "01"01</option>01
+       <option value = "02"02</option>02
+       <option value = "03"03</option>03
+       <option value = "04"04</option>04
+       <option value = "05"05</option>05
      </select>
      :
      <select name = "startMin">
+       <option value = "--"--</option>--
        <option value = "00"00</option>00
        <option value = "15"15</option>15
        <option value = "30"30</option>30
@@ -68,26 +100,29 @@
       to
       <!-- End availability dropdown-->
      <select name = "endHour">
-        <option value = "9"9</option>9
+        <option value = "--"--</option>--
+        <option value = "09"09</option>09
         <option value = "10"10</option>10
         <option value = "11"11</option>11
         <option value = "12"12</option>12
-        <option value = "1"1</option>1
-        <option value = "2"2</option>2
-        <option value = "3"3</option>3
-        <option value = "4"4</option>4
-        <option value = "5"5</option>5
-        <option value = "6"6</option>6
+        <option value = "01"01</option>01
+        <option value = "02"02</option>02
+        <option value = "03"03</option>03
+        <option value = "04"04</option>04
+        <option value = "05"05</option>05
+        <option value = "06"06</option>06
      </select>
      :
      <select name = "endMin">
+        <option value = "--"--</option>--
         <option value = "00"00</option>00
         <option value = "15"15</option>15
         <option value = "30"30</option>30
         <option value = "45"45</option>45
      </select>
+     </p>
      <!-- New Patient checkbox-->
-     <p><input type="checkbox" name="newPatient" value=true> Is this a new patient?</p>
+     <p><input type="checkbox" name="newPatient" value=yes> Is this a new patient?</p>
      <!-- Submit Button-->
      <p><input type="submit" /></p>
    </form>

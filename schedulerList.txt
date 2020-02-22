@@ -1,2 +1,0 @@
-Josh,11045 Nathan Bay,A,5,9,00,9,00,true,
-Sales,4972 Rutherford,Q,6,9,00,9,00,,
